@@ -7,12 +7,26 @@ Funcionalidade: Nova Conta
 
     @criar_conta_valida
     Cenário: Criar uma conta válida
-        Dado que estou na tela Sign In
+        Dado que vejo a tela de login
         Quando colocar email "valido"
-        Então vejo a tela de cadastro
-    
+        Então vejo o formulário de registro
+ 
     @criar_conta_invalida
     Cenário: Criar uma conta inválida
-        Dado que estou na tela Sign In
+        Dado que vejo a tela de login
         Quando colocar email "invalido"
         Então vejo uma mensagem de erro
+    
+    @cadastro
+    Cenário: Realizar cadastro
+        Dado que vejo a tela de login
+        Quando preencher os "campos"
+        Então crio uma conta com sucesso
+
+    @cadastro_duplicado
+    Cenário: Realizar cadastro de email duplicado
+        Dado que vejo a tela de login
+        Quando colocar email já "cadastrado"
+        Então vejo uma mensagem de que o email ja foi registrado
+
+    
