@@ -1,6 +1,10 @@
 class SignInPage < SitePrism::Page
     set_url '/index.php?controller=authentication&back=my-account'
 
+    element :input_email_login, '#email'
+    element :input_senha_login, '#passwd'
+    element :btn_sign_in, '#SubmitLogin'
+
     element :input_email, '#email_create'
     element :btn_create, '#SubmitCreate'
 
@@ -22,6 +26,12 @@ class SignInPage < SitePrism::Page
     def criar_conta(email)
         input_email.set email
         btn_create.click
+    end
+
+    def login(email, senha)
+        input_email_login.set email
+        input_senha_login.set senha
+        btn_sign_in.click
     end
 
     def registrar_conta(title, first_name, last_name, password, day, month, year, company, address1, city, state, postcode, phone_mobile)
