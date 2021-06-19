@@ -20,7 +20,7 @@ Funcionalidade: Nova Conta
     @cadastro
     Cenário: Realizar cadastro
         Dado que vejo a tela de login
-        Quando preencher os "campos"
+        Quando preencher o formulario com "campos validos"
         Então crio uma conta com sucesso
 
     @cadastro_duplicado

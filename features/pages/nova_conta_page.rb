@@ -24,7 +24,7 @@ class SignInPage < SitePrism::Page
         btn_create.click
     end
 
-    def register(title, first_name, last_name, password, day, month, year, company, address1, city, state, postcode, phone_mobile)
+    def registrar_conta(title, first_name, last_name, password, day, month, year, company, address1, city, state, postcode, phone_mobile)
         radio_title.choose(option: title)
         input_first_name.set first_name
         input_last_name.set last_name
