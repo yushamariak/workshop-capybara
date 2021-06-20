@@ -1,3 +1,9 @@
+Dado('que estou logado na aplicação') do
+    @sign_in = SignInPage.new
+    @sign_in.load
+    @sign_in.login('ys1@tst.com', '123456')
+end
+
 ############Adicionar item ao carrinho
 Dado('que estou vendo detalhes de um produto') do    
     @produto_page = ProdutoPage.new
