@@ -1,9 +1,3 @@
-Dado('que estou logado na aplicação') do
-    @sign_in = SignInPage.new
-    @sign_in.load
-    @sign_in.login('ys1@tst.com', '123456')
-end
-
 ############Adicionar item ao carrinho
 Dado('que estou vendo detalhes de um produto') do    
     @produto_page = ProdutoPage.new
@@ -56,12 +50,12 @@ end
 Quando('fizer a compra do produto') do
     @produto_page.find_button('Add to cart').click
     @produto_page.proceed_checkout
-
+    
     @summary_page = SummaryPage.new
     @summary_page.proceed_checkout
-
+    
     click_button('processAddress')
-
+    
     check('cgv', visible: false)
     click_button('processCarrier')
     find_link('Pay by bank wire').click

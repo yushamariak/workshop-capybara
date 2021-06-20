@@ -1,3 +1,9 @@
+Before ('@carrinho') do
+    @sign_in = SignInPage.new
+    @sign_in.load
+    @sign_in.login('ys1@tst.com', '123456')
+end
+
 Before ('@escolher_endereco') do
     @produto_page = ProdutoPage.new
     @produto_page.load

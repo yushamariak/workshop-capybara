@@ -5,9 +5,6 @@ Funcionalidade: Carrinho de compras
     Quero poder acessar o carrinho de compras
     Para conseguir realizar a compra de um item
 
-    Contexto: 
-        Dado que estou logado na aplicação
-
     @add_item
     Cenário: Adicionar item ao carrinho
         Dado que estou vendo detalhes de um produto
