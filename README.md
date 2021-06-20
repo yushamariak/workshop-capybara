@@ -1,6 +1,7 @@
 # README
 
  Verificar documentação abaixo para configuração do ambiente
+ 
   <https://github.com/lorainegarutti/setup-capybara>
 
 ## Configuração do Gemfile
@@ -49,8 +50,6 @@ Se houver algum erro na execução do comando acima, tentar este:
 ```command
 bundle exec cucumber -t @login
 ```
-
-## Comandos para executar os cenários
 
 ## Site utilizado no projeto
 
