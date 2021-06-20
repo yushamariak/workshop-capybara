@@ -1,6 +1,7 @@
 # README
 
  Verificar documentação abaixo para configuração do ambiente
+ 
   <https://github.com/lorainegarutti/setup-capybara>
 
 ## Configuração do Gemfile
