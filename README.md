@@ -51,8 +51,6 @@ Se houver algum erro na execução do comando acima, tentar este:
 bundle exec cucumber -t @login
 ```
 
-## Comandos para executar os cenários
-
 ## Site utilizado no projeto
 
 <http://automationpractice.com/>
