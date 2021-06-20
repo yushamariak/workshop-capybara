@@ -1,18 +1,22 @@
-CONFIGURAÇÃO DOS ARQUIVOS
+# README
 
+ Verificar documentação abaixo para configuração do ambiente
+  <https://github.com/lorainegarutti/setup-capybara>
 
-GEM FILE
+## Configuração do Gemfile
 
-source 'http://rubygems.org'
+source <http://rubygems.org>
 
+```gemfile
 gem 'cucumber'
 gem 'rspec'
 gem 'capybara'
 gem 'selenium-webdriver'
+```
 
+## Configuração do ENV
 
-ENV.RB
-
+```env
 require 'cucumber'
 require 'capybara/cucumber'
 require 'selenium-webdriver'
@@ -24,35 +28,50 @@ Capybara.configure do |config|
 end
 
 Capybara.page.driver.browser.manage.window.maximize
+```
 
+## Comandos a serem executados após configurar e salvar o Gem File
 
+```command
+gem install bundle
+ou
+bundle install
+```
 
-Comandos a serem executados após configurar e salvar o Gem File:
+## Execução dos cenários
 
-- gem install bundle
-
-- bundle install
-
-
-
-UTILIZAÇÃO DE TAGS
-
-
-As tags servem como um agrupamento, fazendo com que apenas sejam executados os cenários com elas.
-
-Podemos escolher qualquer nome para as tags, contanto que façam sentido para aqueles cenários escolhidos.
-
-
-
-No arquivo login.feature, em cima da palavra "Funcionalidade", adicionar a tag @login. Ou seja, todos cenários dentro
-daquele arquivo, serão executados. Se a tag for colocada em cima de um cenário específico, apenas ele será.
-
-Execução dos cenários
-
-- cucumber -t @login
+```command
+cucumber -t @login
+```
 
 Se houver algum erro na execução do comando acima, tentar este:
 
-- bundle exec cucumber -t @login
+```command
+bundle exec cucumber -t @login
+```
 
+## Comandos para executar os cenários
 
+## Site utilizado no projeto
+
+<http://automationpractice.com/>
+
+## Extensões do VSCode
+
+- Ruby (por Peng Lv)
+
+- Ruby Solargraph
+(por Castwide)
+
+- Cucumber (Gherkin) Full Support
+(por Alexander Krechik)
+
+- Snippets and Syntax Highlight for Gherkin (Cucumber)
+(por Euclidity)
+
+- Gherkin Indent
+(por Aravind Kumar)
+
+- vscode-icons
+
+- Dracula Official
